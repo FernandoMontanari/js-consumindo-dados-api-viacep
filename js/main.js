@@ -2,7 +2,7 @@ async function buscaEndereco(cep) {
     let msgErro = document.getElementById('erro');
     msgErro.innerHTML = "";
     try {
-        let consultaCEP = await fetch(`http://viacep.com.br/ws/${cep}/json/`);
+        let consultaCEP = await fetch(`https://viacep.com.br/ws/${cep}/json/`);
         let consultaCEPConvertida = await consultaCEP.json();
 
         if(consultaCEPConvertida.erro) {
